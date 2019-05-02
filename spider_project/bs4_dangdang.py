@@ -65,7 +65,7 @@ def showResult():
     fileName = 'PythonBook.csv'
 
     # 指定编码为 utf-8, 避免写 csv 文件出现中文乱码
-    with codecs.open(fileName, 'w','utf-8') as csvfile:
+    with codecs.open(fileName, 'w+', encoding='utf-8-sig') as csvfile:
         filednames = ['书名', '页面地址', '图片地址']
         writer = csv.DictWriter(csvfile, fieldnames=filednames)
 
